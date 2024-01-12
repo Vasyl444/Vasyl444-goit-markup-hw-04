@@ -33,7 +33,9 @@ header {border-bottom: 1px solid #E7E9FC;}
     padding-right: 15px;
     padding-left: 15px;
     }
-.head-up {box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08)}
+.head-up {box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);}
 .conthead {
     display: flex;
     flex-wrap: wrap;
@@ -287,6 +289,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
 .social-icon {fill: #f4f4fd}
 .social-link:hover,
+.social-link:focus,
 .social-link:active
 {background-color: #404bbf;}
 /*======PORTFOLIO=======*/
@@ -304,6 +307,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     flex-direction: column;
     align-items: flex-start;
     flex-shrink: 0;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .portfolio {background-color: #FFFFFF;}
@@ -321,16 +325,17 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     height: 100%;
     transform: translateY(100%);
     background-color: #4D5AE5;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-                box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: #F4F4FD;
         font-size: 16px;
         font-weight: 400;
         line-height: 1.5;
-        letter-spacing: 0.02m;
+        letter-spacing: 0.02em;
         padding: 40px 32px;
     }
-.img-overlay:hover .img-text {transform: translateY(0%);}
+.img-overlay:hover .img-text {transform: translateY(0%);
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);}
 
 .img-port {flex-shrink: 0;}
 .elements .el-title { 
@@ -411,6 +416,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link-foot:hover,
+.social-link-foot:focus,
 .social-link-foot:active
 {background-color: #31d0aa;}
 .social-icons-foot {
